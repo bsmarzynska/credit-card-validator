@@ -11,20 +11,20 @@ public class ValidatorTests {
     Validator validator = new Validator();
 
     private final static Logger logger = Logger.getLogger(ValidatorTests.class.getName());
-    static
-    {
+
+    static {
         PropertyConfigurator.configure(ValidatorTests.class.getClassLoader().getResource("log4j.properties"));
     }
 
     @Test
-    public void whenSumLessThanTenThenCorrectResultReturned() {
+    public void doubleDigit_whenSumLessThanTenThenCorrectResultReturned() {
         logger.info("Run test case for sum less than 10");
         Assert.assertEquals(validator.doubleDigit(4), 8, "When input equals to 4 then doubled value is 8");
         logger.info("Test passed: when sum equals to 4 then doubled value is 8");
     }
 
     @Test
-    public void whenSumGreaterThanTenThenCorrectResultReturned() {
+    public void doubleDigit_whenSumGreaterThanTenThenCorrectResultReturned() {
         logger.info("Run test case for sum greater than 10");
         Assert.assertEquals(validator.doubleDigit(7), 5, "When input equals to 7 then doubled value is 5");
         logger.info("Test passed: when sum equals to 7 then doubled value is 5");

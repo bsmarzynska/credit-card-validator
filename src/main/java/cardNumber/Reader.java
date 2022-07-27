@@ -9,12 +9,14 @@ import java.io.InputStreamReader;
 public class Reader {
     public String readNumber() {
         String cardNumber = "";
+
         System.out.println("Please type credit card number to validation: ");
         try {
             cardNumber = new BufferedReader(new InputStreamReader(System.in)).readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         if (isInputValid(cardNumber) == false) {
             return null;
         } else {
