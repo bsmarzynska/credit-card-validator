@@ -16,30 +16,30 @@ public class ReaderTests {
     }
 
     @Test(groups = {"validInput"})
-    public void isInputValid_whenValidInputThenReturnTrue() {
+    public void isInputValid_whenValidInput_shouldReturnTrue() {
         logger.info("Run test case for valid format");
-        Assert.assertTrue(reader.isInputValid("374412448596234"), "Input format is valid");
+        Assert.assertTrue(reader.isInputValid("374412448596234"), "Validation failed.");
         logger.info("Test passed: 374412448596234 is valid format of credit card number");
     }
 
     @Test(groups = {"invalidInput"})
-    public void isInputValid_whenInvalidInputThenReturnFalse() {
+    public void isInputValid_whenInvalidInput_shouldReturnFalse() {
         logger.info("Run test case for invalid format");
-        Assert.assertFalse(reader.isInputValid("invalid input"), "Input format is valid");
+        Assert.assertFalse(reader.isInputValid("123"), "Validation failed.");
         logger.info("Test passed: invalid input is invalid format of credit card number");
     }
 
     @Test(groups = {"invalidInput"})
-    public void IsInputValid_whenEmptyInputThenReturnFalse() {
+    public void IsInputValid_whenEmptyInput_shouldReturnFalse() {
         logger.info("Run test case for empty string");
-        Assert.assertFalse(reader.isInputValid(""), "Input format is valid");
+        Assert.assertFalse(reader.isInputValid(""), "Validation failed.");
         logger.info("Test passed: empty string is invalid format of credit card number");
     }
 
     @Test(groups = {"invalidInput"})
-    public void IsInputValid_whenNullInputThenReturnFalse() {
+    public void IsInputValid_whenNullInput_shouldReturnFalse() {
         logger.info("Run test case for null value");
-        Assert.assertFalse(reader.isInputValid(null), "Input format is valid");
+        Assert.assertFalse(reader.isInputValid(null), "Validation failed.");
         logger.info("Test passed: null value is invalid format of credit card number");
     }
 }
